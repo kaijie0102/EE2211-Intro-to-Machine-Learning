@@ -29,28 +29,30 @@ poly = PolynomialFeatures(order)
 P = poly.fit_transform(x) # transforming x into p
 print("Matrix P: \n", P)
 
-""" Section B: Non ridge Regression Choose one, comment out the other """
+""" Section B: Non ridge Regression """
 # ================================================
-# Underdetermined System m < d. Comment out line below if it is system is overdetermined
-w_dual = P.T @ inv(P @ P.T) @ y
-print(w_dual)
-
-# Overdetermined System m > d. Comment out line below if it is system is underdetermined
-# w_primal = inv(P.T @ P) @ P.T @ y
-# print(w_primal)
+if (P.shape[1] > P.shape[0]):
+    # Underdetermined System m < d. Comment out line below if it is system is overdetermined
+    w_dual = P.T @ inv(P @ P.T) @ y
+    print(w_dual)
+else: 
+    # Overdetermined System m > d. Comment out line below if it is system is underdetermined
+    w_primal = inv(P.T @ P) @ P.T @ y
+    print(w_primal)
 # ================================================
 
 """ Section C: Ridge Regression Choose one, comment out the other """
 # ================================================
 # Underdetermined System m < d. Comment out code below if it is system is overdetermined
-reg_L = 0.0001*np.identity(P.shape[0]) # size of P.T @ P = m x m (rows)
-w_dual_ridge = P.T @ inv(P @ P.T + reg_L) @ y
-print(w_dual_ridge)
-
-# Overdetermined System m > d. Comment out code below if it is system is underdetermined
-reg_L = 0.0001*np.identity(P.shape[1]) # size of P.T @ P = d x d (columns)
-w_primal_ridge = inv(P.T @ P + reg_L) @ P.T @ y
-print(w_primal_ridge)
+if (P.shape[1] > P.shape[0]):
+    reg_L = 0.0001*np.identity(P.shape[0]) # size of P.T @ P = m x m (rows)
+    w_dual_ridge = P.T @ inv(P @ P.T + reg_L) @ y
+    print(w_dual_ridge)
+else:
+    # Overdetermined System m > d. Comment out code below if it is system is underdetermined
+    reg_L = 0.0001*np.identity(P.shape[1]) # size of P.T @ P = d x d (columns)
+    w_primal_ridge = inv(P.T @ P + reg_L) @ P.T @ y
+    print(w_primal_ridge)
 # ================================================
 
 
