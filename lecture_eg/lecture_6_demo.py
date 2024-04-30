@@ -30,9 +30,9 @@ print(y_class_predicted)
 """
 X = np.array([1,1,1, 1,-1,1, 1,1,3, 1,1,0]).reshape(4,3)
 y_class = np.array([1,2,1,3]).reshape(4,1)
-y_one_hot = np.array([1,0,0, 0,1,0, 1,0,0, 0,0,1]).reshape(4,3)
 
 # NOT recommended: Manually assigning the one-hot assignments.
+y_one_hot = np.array([1,0,0, 0,1,0, 1,0,0, 0,0,1]).reshape(4,3)
 print("One-hot encoding manual")
 print(y_class)
 print(y_one_hot)
@@ -43,8 +43,8 @@ onehot_encoder = OneHotEncoder(sparse=False) # sparse=False format improves read
 print(onehot_encoder)
 
 y_train_onehot = onehot_encoder.fit_transform(y_class)
-print(y_train_onehot).
- VBN
+print(y_train_onehot)
+
 # Linear Classification
 W = inv(X.T @ X) @ X.T @ y_train_onehot
 print("Estimated W")
