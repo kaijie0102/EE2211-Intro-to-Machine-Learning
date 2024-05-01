@@ -17,10 +17,6 @@ def pearson_correlation(x, y):
     
     return pearson_coefficient
 
-# Example usage:
-# x = [1, 2, 3, 4, 5]
-# y = [2, 3, 4, 5, 6]
-
 # Inputs from tutorial 7 question 1: Feature 3 and Target Y
 x = [-0.9852, 1.3766, -1.3244, -0.6316, -0.8320]
 y = [0.2758, 1.4392, -0.4611, 0.6154, 1.0006]
