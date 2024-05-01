@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 from numpy.linalg import inv
 
 def CreateRegressors(x, max_order):
-# x is assumed to be array of length N
-# return P = list of regressors based on max_order
-# P[i] are regressors for order i+1 and is of size N x (order+1), where
-# N is number of data points
+    # x is assumed to be array of length N
+    # return P = list of regressors based on max_order
+    # P[i] are regressors for order i+1 and is of size N x (order+1), where
+    # N is number of data points
     P = [] #initialize empty list
     for order in range(1, max_order+1):
         current_regressors = np.zeros([len(x), order+1])

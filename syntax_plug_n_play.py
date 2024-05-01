@@ -16,12 +16,14 @@ print("x is:\n", x)
 print("y is:\n", y)
 print()
 
+
+
 """
 HAVE YOU RESHAPED??????????
 """
 
 # Rank & Det of matrix #
-print("Rank of x:\n", matrix_rank(x)) # Rank = No. of Rows ==> Full Rank ==> Invertible
+# print("Rank of x:\n", matrix_rank(x)) # Rank = No. of Rows ==> Full Rank ==> Invertible
 # print("Determinant of x:\n", det(x)) # only valid for square matrices. Determinant != 0 ==> Invertible
 # print()
 
