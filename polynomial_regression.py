@@ -17,6 +17,10 @@ README
 # ================================================
 # for training
 x = np.array([1,0,1, 1,-1,1]).reshape(2,3)
+""" 
+there is no need for 1 to be in first column of X, 
+fit_transform function will do it
+"""
 y = np.array([0,1]).reshape(2,1)
 
 # for testing
