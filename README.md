@@ -3,7 +3,9 @@
 2. `syntax.py`: Syntax Bank
 3. `linear_regression.py`: Templated code for linear regression
 4. `polynomial_regression.py`: Templated code for polynomial regression
-5. lecture_eg folder are the code from lectures
+5. `lecture_eg/lecture_7_demo.py` Regularisation visualisation
+5. `lecture_eg/lecture_9_demo.py` Regression Tree 
+6. lecture_eg folder are the code from lectures
 
 # Link to Notes
 https://docs.google.com/document/d/1Cv_lILgvnCdtqhWOr1fDwkh2YDoPrDZSZXfZ1ll5pjE/edit?usp=sharing
