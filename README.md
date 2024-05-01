@@ -3,9 +3,10 @@
 2. `syntax.py`: Syntax Bank
 3. `linear_regression.py`: Templated code for linear regression
 4. `polynomial_regression.py`: Templated code for polynomial regression
+5. lecture_eg folder are the code from lectures
 
-
-1. lecture_eg folder are the code from lectures
+# Link to Notes
+https://docs.google.com/document/d/1Cv_lILgvnCdtqhWOr1fDwkh2YDoPrDZSZXfZ1ll5pjE/edit?usp=sharing
 
 # FAQ
 - How to select the right python environment using wsl? 
