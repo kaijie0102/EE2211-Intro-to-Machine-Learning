@@ -115,3 +115,31 @@ print(w_dual_ridge)
 reg_L = 0.0001*np.identity(P.shape[1]) # size of P.T @ P = d x d (columns)
 w_primal_ridge = inv(P.T @ P + reg_L) @ P.T @ y
 print(w_primal_ridge)
+
+### Section F: Gradient Descent ###
+# Main function is y=x**2
+# Gradient is 2x
+
+# Initialization & Parameters
+x = -1 #
+eta = 0.4 #just nice
+print('------ eta = '+str(eta)+' -------')
+
+# Section F1: Convergence Criteria: Maximum k=5 #
+for i in range(0,5):
+    x= x-2*eta*x
+    print(x)
+
+# Section F2: Convergence Criteria: Stop if Percentage change in x < 1% #
+count = 0
+while count != 10: # max iteration = 10 
+    count += 1
+    x_new = x - eta * (2*x) # gradient = 2x
+    print("Old X: {x}, New X: {x_new}".format(x=x, x_new=x_new))
+    if ((x == 0) or ( abs((x_new - x)/x) < 0.01 )):
+        print("Optimal X: ", x_new)
+        break
+    else: 
+        x = x_new
+
+
