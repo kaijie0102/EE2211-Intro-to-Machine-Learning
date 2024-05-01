@@ -15,7 +15,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import PolynomialFeatures
 
 ### Section A: Basics ###
-# Section A1: matrix #
+# Section A1: Initialisation #
 x = np.array([1, 3, 1, 4, 1, 10, 1, 6, 1, 7]).reshape(5,2) # 5 rows of 2
 y = np.array([0, 5, 1.5, 4, -3, 8, -4, 10, 1, 6]).reshape(5,2) # 5 rows of 2
 print("x is:\n", x)
@@ -30,16 +30,22 @@ print(x2)
 print(x3)
 """
 
-# Section A2: Show shape and size #
+# Section A2: Adding Bias programatically #
+Y = [1,2,3]
+X = np.ones([len(y), 2])
+X[:, 1] = Y
+print("X: \n",X)
+
+# Section A3: Show shape and size #
 print("Shape of x:\n", x.shape)
 print()
 
-# Section A3: Rank & Det of matrix #
+# Section A4: Rank & Det of matrix #
 print("Rank of x:\n", matrix_rank(x)) # Rank = No. of Rows ==> Full Rank ==> Invertible
 print("Determinant of x:\n", det(x_square)) # only valid for square matrices. Determinant != 0 ==> Invertible
 print()
 
-# Section A4: inverse & transpose of x #
+# Section A5: inverse & transpose of x #
 print("Tranpose of x:\n", x.T)
 print("Inverse of x_square:\n", inv(x_square)) # Invertible if matrix is square and have full rank
 print()
