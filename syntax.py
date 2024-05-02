@@ -32,9 +32,9 @@ print(x3)
 """
 
 # Section A2: Adding Bias programatically #
-Y = [1,2,3]
-X = np.ones([len(y), 2])
-X[:, 1] = Y
+X1 = [1,2,3]
+X = np.ones([len(X1), 2])
+X[:, 1] = X1
 print("X: \n",X)
 
 # Section A3: Show shape and size #
