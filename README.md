@@ -1,5 +1,5 @@
 # Which files do I use?
-1. `syntax_plug_n_play.py`: Most Important file. Take what you need from `syntax.py` and then execute
+1. `syntax_plug_n_play.py`: Take what you need from `syntax.py` and then execute
 2. `syntax.py`: Syntax Bank
 3. `linear_regression.py`: Templated code for linear regression
 4. `polynomial_regression.py`: Templated code for polynomial regression
@@ -8,7 +8,7 @@
 7. `tut_eg/Tut9_Q3_zhou.py` Regression Tree Example (Same as `lecture_9_demo.py`)
 8. `tut_eg/Tut9_Q4_yeo.py` Classification Tree Example
 9. `regression_tree_mse.py`: Finding mse
-10. `k_means_clustering.py`: k_means clustering Source: Ella. 
+10. `k_means_clustering.py`: k_means clustering Source: Ella
 11. lecture_eg folder are the code from lectures
     - `lecture_4_demo.py`: Basics
     - `lecture_5_demo.py`: Linear Regression
