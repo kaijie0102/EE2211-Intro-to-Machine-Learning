@@ -20,9 +20,9 @@ y_row = 6
 y_col = 1
 
 ### CHANGE if making prediction (comment out if not in use) ###
-# x_to_predict_array = [1, 63, 9]
-# x_to_predict_row = 1
-# y_to_predict_col = 3
+x_to_predict_array = [1, 6]
+x_to_predict_row = 1
+y_to_predict_col = 2
 
 """
 Comment out what you don't need
@@ -51,9 +51,11 @@ print()
 
 
 ### Do not touch (comment out if not in use) ###
-# x_to_predict = np.array(x_to_predict_array).reshape(x_to_predict_row, y_to_predict_col)
-# y_predicted = x_to_predict @ w
-# print("y predicted is:\n", y_predicted)
+x_to_predict = np.array(x_to_predict_array).reshape(x_to_predict_row, y_to_predict_col)
+y_predicted = x_to_predict @ w
+print("y predicted is:\n", y_predicted)
+# y_class_predicted = np.sign(y_predicted)
+# print(y_class_predicted)
 
 
 ### Mean Square Regression (comment out if not in use) ###
