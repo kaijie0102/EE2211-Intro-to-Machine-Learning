@@ -7,6 +7,7 @@ This is a syntax bank, for you to plug and play
 import pandas as pd
 import numpy as np
 from numpy.linalg import inv
+from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 from numpy.linalg import matrix_rank
@@ -68,20 +69,19 @@ w_under = x.T @ inv(x @ x.T) @ y # if equation is X @ w = Y
 print("Under-determined w:\n", w_under)
 print()
 
-### Section C: Graph and error ###
+### Section C: Evaluation metrics: Error Rate ###
 # Section C1: Using Mean Squared Error #
 w = w_even
 y_calculated = x @ w
 MSE = mean_squared_error(y_calculated, y)
 
-# Section C2: Plotting Graph #
-plt.plot(x[:,1], y[:,0], 'o', label = 'y1')
-plt.plot(x[:,1], y[:,1], 'x', label = 'y2')
-plt.plot(x[:,1], y_calculated[:,0])
-plt.plot(x[:,1], y_calculated[:,1])
-plt.xlabel("X")
-plt.ylabel("Y")
-plt.show()
+# Section C2: Using Mean Absolute Error #
+# Ytrain = P @ w # same as Mean Square Error
+y_calculated = x @ w
+MeanAbsoluteError = mean_absolute_error(y_calculated, y)
+print()
+print("Mean Absolute Error:")
+print(MeanAbsoluteError)
 
 ### Section D: Classification ###
 # Section D1: Binary classification (Signum Function) #
@@ -157,3 +157,12 @@ while count != 10: # max iteration = 10
         x = x_new
 
 
+### Section G: Graph Plotting ###
+# Section G1: Plotting Graph #
+plt.plot(x[:,1], y[:,0], 'o', label = 'y1')
+plt.plot(x[:,1], y[:,1], 'x', label = 'y2')
+plt.plot(x[:,1], y_calculated[:,0])
+plt.plot(x[:,1], y_calculated[:,1])
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show()
