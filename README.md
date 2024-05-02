@@ -5,8 +5,8 @@
 4. `polynomial_regression.py`: Templated code for polynomial regression
 5. `lecture_eg/lecture_7_demo.py` Regularisation visualisation
 6. `lecture_eg/lecture_9_demo.py` 2 ways of doing Regression Tree 
-7. `tut_eg/Tut9_Q3_zhou.py` Regression Classification Example (Same as `lecture_9_demo.py`)
-8. `tut_eg/Tut9_Q4_yeo.py` Classification Classification Example
+7. `tut_eg/Tut9_Q3_zhou.py` Regression Tree Example (Same as `lecture_9_demo.py`)
+8. `tut_eg/Tut9_Q4_yeo.py` Classification Tree Example
 9. lecture_eg folder are the code from lectures
     - `lecture_4_demo.py`: Basics
     - `lecture_5_demo.py`: Linear Regression
