@@ -7,7 +7,8 @@
 6. `lecture_eg/lecture_9_demo.py` 2 ways of doing Regression Tree 
 7. `tut_eg/Tut9_Q3_zhou.py` Regression Tree Example (Same as `lecture_9_demo.py`)
 8. `tut_eg/Tut9_Q4_yeo.py` Classification Tree Example
-9. lecture_eg folder are the code from lectures
+9. `regression_tree_mse.py`: Finding mse 
+10. lecture_eg folder are the code from lectures
     - `lecture_4_demo.py`: Basics
     - `lecture_5_demo.py`: Linear Regression
     - `lecture_6_demo.py`: Binary Classification, Multi Classification and Polynomial Regression
