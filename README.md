@@ -2,7 +2,7 @@
 1. `syntax_plug_n_play.py`: Take what you need from `syntax.py` and then execute
 2. `syntax.py`: Syntax Bank
 3. `linear_regression.py`: Templated code for linear regression
-4. `polynomial_regression.py`: Templated code for polynomial regression
+4. `polynomial_regression.py`: Templated code for polynomial regression 
 5. `lecture_eg/lecture_7_demo.py` Regularisation visualisation
 6. `lecture_eg/lecture_9_demo.py` 2 ways of doing Regression Tree 
 7. `tut_eg/Tut9_Q3_zhou.py` Regression Tree Example (Same as `lecture_9_demo.py`)
