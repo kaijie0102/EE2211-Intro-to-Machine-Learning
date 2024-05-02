@@ -11,15 +11,18 @@ Fill in everything here in one line, row by row.
 Eg, if 3x2: [ [1,1], [1,-1], [1,0] ] = [1,1,1,-1,1,0]
 Remember to augment with 1s to add bias to X only
 """
-x_array = [1,45,9, 1,50,10, 1,63,12 ,1,70,8, 1,80,4]
-x_row = 5
-x_col = 3
+x_array = [1,4, 1,7, 1,10, 1,2, 1,3, 1,9]
+x_row = 6
+x_col = 2
 
-y_array = [6,9,8,3,2]
-y_row = 5
+y_array = [-1,-1,-1,1,1,1]
+y_row = 6
 y_col = 1
 
-
+### CHANGE if making prediction (comment out if not in use) ###
+# x_to_predict_array = [1, 63, 9]
+# x_to_predict_row = 1
+# y_to_predict_col = 3
 
 """
 Comment out what you don't need
@@ -46,20 +49,20 @@ print("w is: ")
 print(w)
 print()
 
-### CHANGE if making prediction (comment out if not in use) ###
-x_to_predict_array = [1, 63, 9]
-x_to_predict_row = 1
-y_to_predict_col = 3
 
 ### Do not touch (comment out if not in use) ###
-x_to_predict = np.array(x_to_predict_array).reshape(x_to_predict_row, y_to_predict_col)
-y_predicted = x_to_predict @ w
-print("y predicted is:\n", y_predicted)
+# x_to_predict = np.array(x_to_predict_array).reshape(x_to_predict_row, y_to_predict_col)
+# y_predicted = x_to_predict @ w
+# print("y predicted is:\n", y_predicted)
 
 
 ### Mean Square Regression (comment out if not in use) ###
 y_calculated = x @ w
 MSE = mean_squared_error(y_calculated, y)
 print("MSE\n", MSE)
+
+### Linear Regression --> Sign Function ###
+y_class_predicted = np.sign(y_calculated)
+print(y_class_predicted)
 
 
