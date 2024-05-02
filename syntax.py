@@ -84,10 +84,18 @@ plt.ylabel("Y")
 plt.show()
 
 ### Section D: Classification ###
-# Section D1: Binary classification (Signum Function)
+# Section D1: Binary classification (Signum Function) #
 y_class_predicted = np.sign(y) # Applying signum function to make it 1 or -1 (aka one of the 2 classes)
 
-# Section D2: Multi-Category Classification (One Hot Encoding)
+# Section D2: Manual One Hot Encoding #
+Y = list()
+for i in y:
+    letter = [0, 0, 0]
+    letter[i] = 1
+    Y.append(letter)
+Y = np.array(Y)
+
+# Section D3: Multi-Category Classification (One Hot Encoding using lib) #
 onehot_encoder = OneHotEncoder(sparse=False) # sparse=False format improves readability
 y_train_onehot = onehot_encoder.fit_transform(y) # one hot encode y.
 # Linear Classification
@@ -106,7 +114,7 @@ print("Class label test")
 print(yt_class)
 
 ### Section E: Polynomial Regression ###
-# Section E1: Generate polynomial feature (Get P from X)
+# Section E1: Generate polynomial feature (Get P from X) #
 order = 3
 poly = PolynomialFeatures(order)
 P = poly.fit_transform(x) # transforming x into p
