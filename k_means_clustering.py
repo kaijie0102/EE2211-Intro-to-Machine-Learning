@@ -42,9 +42,10 @@ def grouped(group1_centroid, group2_centroid, data):
     print("new centroid 2: " + str(new_centroid2))
     
 
-data = [50, 60, 66, 68, 71, 72, 75, 82, 90, 99]
+data = [10, 11, 16,16,16, 18,18,21,21]
 
 group1_centroid = 66
 group2_centroid = 75
+group3_centroid = 75
 
 grouped(group1_centroid, group2_centroid, data)

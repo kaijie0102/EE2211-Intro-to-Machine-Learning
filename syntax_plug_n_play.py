@@ -10,27 +10,28 @@ import matplotlib.pyplot as plt
 from numpy.linalg import matrix_rank
 from numpy.linalg import det
 
-x = np.array([1,1,1,0]).reshape(2,2) 
-y = np.array([1,2,3]).reshape(3,1)
+# x1 = [4,7,10, 2,3,9]
+# x = np.ones([len(x1), 2]) # shape = len(x1), 2
+# x[:, 1] = x1
+x = np.array([5,0,5,10,17,10,20,0,20]).reshape(3,3) 
+# y = np.array([-1,-1,-1, 1,1,1]).reshape(6,1)
 print("x is:\n", x)
-print("y is:\n", y)
+# print("y is:\n", y)
 print()
+# y = np.array([5,13,15,25,6,16,2,19])
+# MSE = mean_squared_error(13.5, y)
+# print("MSe:", MSE)
 
+
+print("Rank of x:\n", matrix_rank(x)) # Rank = No. of Rows ==> Full Rank ==> Invertible
+# print("Determinant of x:\n", det(x_square)) # only valid for square matrices. Determinant != 0 ==> Invertible
+# print()
 
 
 """
 HAVE YOU RESHAPED??????????
 """
 
-# Rank & Det of matrix #
-# print("Rank of x:\n", matrix_rank(x)) # Rank = No. of Rows ==> Full Rank ==> Invertible
-# print("Determinant of x:\n", det(x)) # only valid for square matrices. Determinant != 0 ==> Invertible
-# print()
-
-# inverse & transpose of x #
-# print("Tranpose of x:\n", x.T)
-# print("Inverse of x_square:\n", inv(x)) # Invertible if matrix is square and have full rank
-# print()
 
 # Even-determined System: m = d # 
 # w_even = inv(x) @ y2
@@ -48,8 +49,3 @@ HAVE YOU RESHAPED??????????
 # # w_under = x @ inv(x.T @ x) @ y # if equation is X.T @ w = Y 
 # print("Under-determined w:\n", w_under)
 # print()
-
-# Using Mean Squared Error #
-# w = w_even
-# y_calculated = x @ w
-# MSE = mean_squared_error(y_calculated, y)
